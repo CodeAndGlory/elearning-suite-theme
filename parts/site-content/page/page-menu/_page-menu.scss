@@ -1,0 +1,142 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+$color__border: $color__gray-md;
+$color__text-page-menu: $color__gray-dk;
+$color__page-menu-arrow: $color__gray-dk;
+
+.page-navigation {
+	@include universal-padding;
+	@include universal-max-width;
+
+	display: flex;
+	flex-direction: row;
+	padding-top: $padding__mobile;
+	padding-bottom: $padding__mobile;
+
+	justify-content: center;
+
+	a {
+		display: block;
+		padding: 16px;
+		color: $color__text-page-menu;
+		font-size: 16px;
+		text-decoration: none;
+
+		&:active,
+		&:focus,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@media screen and (min-width: $breakpoint__sm) {
+		padding-top: 0;
+		padding-bottom: 0;
+		border-bottom: 1px solid $color__border;
+	}
+}
+
+.page-navigation-mobile {
+	width: 100%;
+
+	.dropdown-toggle {
+		width: 100%;
+		padding: 16px;
+		border: 1px solid $color__border;
+		color: $color__text-page-menu;
+		background-color: unset;
+		font-size: 16px;
+		text-align: left;
+
+		&:after {
+			display: block;
+			position: absolute;
+			top: 18px;
+			right: 31px;
+			width: 8.5px;
+			height: 8.5px;
+			margin: 0;
+			border-top: 0;
+			border-right: 2px solid $color__page-menu-arrow;
+			border-bottom: 2px solid $color__page-menu-arrow;
+			border-left: 0;
+			content: "";
+			transform: rotate(45deg);
+		}
+
+		&[aria-expanded="true"] {
+			&:after {
+				top: 23px;
+				transform: rotate(-135deg);
+			}
+		}
+	}
+
+	.dropdown-menu {
+		width: 100%;
+		border-top: none;
+		border-right: 1px solid $color__border;
+		border-bottom: 1px solid $color__border;
+		border-left: 1px solid $color__border;
+		border-radius: 0;
+	}
+
+	@media screen and (min-width: $breakpoint__sm) {
+		display: none;
+	}
+}
+
+.page-navigation-web {
+	display: none;
+
+	@media screen and (min-width: $breakpoint__sm) {
+		display: flex;
+	}
+}
+
+.page-navigation-web-list {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	justify-content: center;
+
+	a {
+		display: block;
+		padding: 25px 16px;
+
+		&:active,
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	li {
+		overflow: hidden;
+		position: relative;
+
+		&:after {
+			display: block;
+			position: absolute;
+			//z-index: 999;
+			bottom: -8px;
+			width: calc(100% - 34px);
+			height: 8px;
+			margin: 0 16px;
+			content: "";
+			transition: all 0.3s ease-out;
+		}
+
+		&.current_page_item,
+		&:active,
+		&:focus,
+		&:hover {
+			&:after {
+				bottom: 0;
+			}
+		}
+	}
+}

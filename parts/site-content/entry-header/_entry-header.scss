@@ -1,0 +1,207 @@
+@import "../../mixins/index";
+@import "../../variables/index";
+
+.entry-header-wrapper {
+	display: flex;
+	margin-bottom: 30px;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	background-color: #f4f4f4;
+
+	align-items: center;
+}
+
+.entry-header {
+	@include universal-padding;
+	@include universal-max-width;
+
+	display: flex;
+	width: 100%;
+	font-family: $font__unit-titles;
+	font-size: 36px;
+	font-weight: $bold;
+	line-height: 1.3;
+
+	align-items: center;
+}
+
+.unit-icon {
+	display: flex;
+	width: 60px;
+	min-width: 60px;
+	height: 60px;
+	min-height: 60px;
+	margin-right: 25px;
+	border-radius: 8px;
+	background-color: gray;
+
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		width: 55%;
+	}
+
+	&.clipboard {
+		svg {
+			width: 45%;
+		}
+	}
+}
+
+@include bp($breakpoint__sm) {
+	.entry-header-wrapper {
+		margin-bottom: 35px;
+	}
+
+	.entry-header {
+		font-size: 42px;
+	}
+
+	.unit-icon {
+		min-width: 100px;
+		min-height: 100px;
+	}
+}
+
+@include bp($breakpoint__xl) {
+	.entry-header {
+		font-size: 48px;
+	}
+}
+
+.home .site-header {
+	margin-bottom: $margin__bottom;
+}
+
+.blog-description {
+	@include bp($breakpoint__sm) {
+		font-size: 42px;
+	}
+	@include bp($breakpoint__xl) {
+		font-size: 48px;
+	}
+
+	margin-bottom: 20px;
+	font-family: $font__unit-titles;
+	font-size: 36px;
+	font-weight: $bold;
+	line-height: 1.3;
+}
+
+.course-intro-start {
+	@include universal-padding;
+	@include universal-max-width;
+
+	margin-bottom: $margin__bottom;
+
+	.thumbnail-wrapper {
+		margin-bottom: $margin__bottom;
+	}
+}
+
+@include bp($breakpoint__md) {
+	.course-intro-start {
+		display: flex;
+
+		.thumbnail-wrapper {
+			margin-right: 60px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include bp($breakpoint__xl) {
+	.course-intro-start {
+		.thumbnail-wrapper {
+			min-width: 630px;
+		}
+	}
+}
+
+.home-unit-description {
+	@include universal-padding;
+	@include universal-max-width;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.unit-links-wrapper {
+	margin-bottom: $margin__bottom;
+	padding-top: 30px;
+	background-color: #f4f4f4;
+}
+
+.home-unit-links {
+	@include universal-padding;
+	@include universal-max-width;
+
+	overflow: hidden;
+
+	a.unit-link {
+		display: block;
+		width: 202px;
+		margin: 30px auto 30px auto;
+		padding: 10px;
+		color: #000 !important;
+		text-align: center;
+		text-decoration: none;
+
+		.unit-title {
+			font-family: $font__headings;
+			font-size: 18px;
+			font-weight: $semi-bold;
+		}
+
+		.unit-icon {
+			min-width: 100px;
+			min-height: 100px;
+			margin: 0 auto 15px auto;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			.unit-icon {
+				background-color: #000;
+			}
+		}
+	}
+}
+
+@include bp($breakpoint__sm) {
+	.home-unit-links {
+		display: grid;
+		padding-top: 30px;
+
+		grid-template-columns: repeat(3, 1fr);
+
+		a.unit-link {
+			width: 224px;
+			margin: 0 auto 30px auto;
+		}
+	}
+}
+
+@include bp($breakpoint__md) {
+	.home-unit-links {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.blog-description-wrapper {
+		display: flex;
+		flex-direction: row;
+
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@include bp($breakpoint__xl) {
+	.home .site-header,
+	.course-intro-start {
+		margin-bottom: 40px;
+	}
+}

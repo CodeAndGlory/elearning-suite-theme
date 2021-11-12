@@ -1,0 +1,62 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+$color__text-th: $color__white;
+$color__background-th: $color__gray-dk;
+$color__background-even: #f4f4f4;
+$color__background-odd: #fff;
+
+.wp-block-table {
+	@include universal-bottom-margin;
+
+	margin: 0;
+	table {
+		margin-bottom: $margin__bottom;
+		thead th {
+			border: 0;
+			color: $color__text-th;
+			background: $color__background-th;
+		}
+
+		td {
+			border: 0;
+		}
+
+		td,
+		th {
+			padding: 2rem 3rem;
+		}
+	}
+
+	&.is-style-stripes {
+		border-bottom: 0;
+		table {
+			tbody tr:nth-of-type(odd) {
+				background-color: $color__background-odd;
+			}
+
+			tbody tr:nth-of-type(even) {
+				background-color: $color__background-even;
+			}
+		}
+	}
+}
+
+.table-responsive {
+	table {
+		tr {
+			border-bottom: 0;
+		}
+	}
+}
+
+.wp-block-table.table-responsive .has-fixed-layout,
+.wp-block-table.table-responsive table {
+	width: $breakpoint__md;
+}
+
+@include bp($breakpoint__md) {
+	.wp-block-table.table-responsive .has-fixed-layout,
+	.wp-block-table.table-responsive table {
+		width: 100%;
+	}
+}

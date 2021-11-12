@@ -1,0 +1,62 @@
+{
+    "key": "group_608710ffa87e1",
+    "title": "Homepage",
+    "fields": [
+        {
+            "key": "field_60871cfc7c78f",
+            "label": "Intro Course Description",
+            "name": "intro_course_description",
+            "type": "wysiwyg",
+            "instructions": "This content appears below the site tagline on the homepage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_60871111dce57",
+            "label": "Unit\/Icons Description",
+            "name": "uniticons_description",
+            "type": "wysiwyg",
+            "instructions": "This content appears above the Unit\/Module Icon Links on the homepage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1619467862
+}

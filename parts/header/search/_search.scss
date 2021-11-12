@@ -1,0 +1,107 @@
+@import "../../mixins/index";
+@import "../../variables/index";
+$color__search-button: #000;
+$color__background-search-button: transparent;
+
+.search-button {
+	width: 50px;
+	margin-left: 16px;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+
+	.search-icon-wrapper {
+		display: flex;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: transparent;
+
+		align-items: center;
+		justify-content: center;
+	}
+
+	svg {
+		overflow: visible;
+		width: 15px;
+		height: 17.5px;
+
+		.st0 {
+			fill: $color__search-button;
+			stroke: $color__search-button;
+		}
+	}
+
+	&:active,
+	&:focus,
+	&:hover,
+	&[aria-expanded="true"] {
+		.search-icon-wrapper {
+			background-color: gray;
+		}
+
+		svg {
+			.st0 {
+				fill: #fff;
+				stroke: #fff;
+			}
+		}
+	}
+}
+
+.search-box {
+	display: none;
+	position: absolute;
+	top: 90px;
+	right: $padding__mobile;
+
+	input,
+	label {
+		box-sizing: border-box;
+		width: 283px;
+	}
+
+	input {
+		padding: 5px 14px;
+		border: 2px solid gray;
+		border-radius: 0;
+	}
+
+	.search-submit {
+		display: none;
+	}
+
+	@media screen and (min-width: $breakpoint__sm) {
+		left: auto;
+	}
+}
+
+.search-form {
+	.search-submit {
+		position: relative;
+		top: -1px;
+		height: 34px;
+		margin-left: -5px;
+		border-radius: 0 4px 4px 0;
+
+		svg {
+			overflow: visible;
+			position: relative;
+			top: 3px;
+			width: 15px;
+			height: 15px;
+		}
+	}
+}
+
+@include bp($breakpoint__sm) {
+	.search-box {
+		right: $padding__tablet;
+	}
+}
+
+@include bp($breakpoint__xl) {
+	.search-box {
+		right: 0;
+	}
+}

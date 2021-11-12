@@ -1,0 +1,15 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap");
+$bold: 700;
+$semi_bold: 600;
+$bold: 700;
+$extra_bold: 800;
+
+@import "colors";
+$font__headings: "Montserrat", sans-serif;
+$font__unit-titles: "Merriweather", serif;
+$font__main: "Nunito Sans", sans-serif;
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$color__text-main: #000;

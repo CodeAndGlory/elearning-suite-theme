@@ -1,0 +1,64 @@
+@import "../variables/index";
+
+//h1 - Montserrat bold 38/36/30px #000
+//h2 - Montserrat bold 32/28/26px #000
+//h3 - Montserrat bold 24/22/22px #000
+//h4 - Montserrat bold 20px #000
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin-bottom: 10px;
+	color: #000;
+	font-family: $font__headings;
+	font-weight: $bold;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5,
+h6 {
+	font-size: 18px;
+}
+
+@include bp($breakpoint__sm) {
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 28px;
+	}
+}
+
+@include bp($breakpoint__xl) {
+	h1 {
+		font-size: 38px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+}

@@ -1,0 +1,70 @@
+{
+    "key": "group_608333bf0fc00",
+    "title": "Unit\/Module Options",
+    "fields": [
+        {
+            "key": "field_608336c227fdf",
+            "label": "Unit\/Module Icon",
+            "name": "unitmodule_icon",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "mas642-unit1": "Laptop with Introduction",
+                "mas642-unit2": "Thinking Lightbulb",
+                "mas642-unit3": "Lightbulb over Book",
+                "mas642-unit4": "Arrow in Target",
+                "mas642-unit5": "Laptop with Playlist",
+                "mas642-unit6": "Nested Experiences",
+                "mas642-unit7": "Checklist",
+                "stacking-bricks": "Stacking Bricks",
+                "book-with-mouse": "Book with Mouse",
+                "clipboard": "Clipboard",
+                "laptop-connecting-with-others": "Laptop Connecting with Others",
+                "person-in-browser": "Web Browser with a Person",
+                "thinking-lightbulb": "Thinking Lightbulb"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_depth",
+                "operator": "==",
+                "value": "0"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1633716455
+}

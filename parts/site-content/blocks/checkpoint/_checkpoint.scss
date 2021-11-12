@@ -1,0 +1,15 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.wp-block-uncgonline-block-checkpoint-quiz {
+	@include universal-bottom-margin;
+
+	padding: 30px;
+	background-color: #f4f4f4;
+
+	button {
+		display: initial;
+		margin-right: 8px;
+		margin-bottom: 0;
+	}
+}

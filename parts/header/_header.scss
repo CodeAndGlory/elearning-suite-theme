@@ -1,0 +1,36 @@
+@import "../mixins/index";
+@import "../variables/index";
+
+.site-header {
+	position: relative;
+	background: gray;
+
+	.site-header-inner {
+		@include universal-padding;
+		@include universal-max-width;
+
+		display: flex;
+		min-height: 80px;
+
+		align-items: center;
+	}
+
+	.site-title {
+		margin-bottom: 0;
+		font-family: $font__headings;
+		font-size: 30px;
+		font-weight: $extra_bold;
+		text-transform: uppercase;
+
+		a {
+			&,
+			&:visited {
+				color: #000;
+			}
+		}
+	}
+
+	.main-navigation {
+		margin-left: auto;
+	}
+}

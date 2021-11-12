@@ -1,0 +1,30 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.wp-block-uncgonline-block-indent {
+	@include universal-bottom-margin;
+
+	margin-top: 0;
+	padding: 30px;
+	border: 0;
+	background-color: #f4f4f4;
+
+	.indent-icon {
+		margin: 0 30px 0 0;
+		border-radius: 8px;
+		background-color: black;
+
+		svg {
+			width: 35px;
+			height: 35px;
+
+			.st0 {
+				fill: #fff;
+			}
+		}
+	}
+
+	.indent-content {
+		margin: 0;
+	}
+}

@@ -1,0 +1,22 @@
+@import "../variables/index";
+blockquote,
+q {
+	margin-bottom: $margin__bottom;
+	padding: 30px;
+	border-radius: 8px;
+	opacity: 1;
+	color: #2f3972;
+	background: #d1e4eb 0 0 no-repeat padding-box;
+	font-family: $font__unit-titles;
+	font-size: 24px;
+	quotes: "" "";
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
